@@ -1,9 +1,10 @@
 # Render96extractor
-Extract and generate ressources package for Render96ex (sm64ex fork)
+
+Tool to extract and generate ressources package for [Render96/Render96ex](https://github.com/Render96/Render96ex) (sm64ex fork). This tools also pack the demo bin data so that [cdeletre/Render96ex](https://github.com/cdeletre/Render96ex/tree/tester_rt64alpha) can be used (it's a fork that build the executable without hardcoding assets).
 
 # Usage
 
-First put your baserom.us.z64 in the root directory and check that the sha1 of this file is correct:
+First put your `baserom.us.z64` (I won't provided this file) in the root directory and check that the sha1 of this file is correct:
 
 ```
 # sha1sum baserom.us.z64
@@ -61,3 +62,41 @@ dynos
 `-- packs
     `-- Render96AlphaModelPack (optionnal)
 ```
+
+# Projects that are sourced here
+
+## Render96ex
+
+Everything in this repository comes from [Render96ex](https://github.com/Render96/Render96ex) and foll except:
+
+- `packs/gfx`
+- `packs/lowmem/gfx`
+- `packs/Render96-Alpha-3.1-modelpack`
+- `packs/lowmem/Render96-Alpha-3.1-modelpack`
+- `gen-res-dynos.sh`
+- `README.md`
+
+Some file that come from [Render96ex](https://github.com/Render96/Render96ex) have been modified:
+- `Makefile` (demo bin data are now loaded from a file)
+- `Dockerfile` (downgrade ubuntu version)
+- `tools/demo_data_converter.py` (demo bin data are now loaded from a file)
+
+This project hasn't specified a licence.
+
+## RENDER96-HD-TEXTURE-PACK
+
+[RENDER96-HD-TEXTURE-PACK](https://github.com/pokeheadroom/RENDER96-HD-TEXTURE-PACK) is used as HD texture pack in:
+
+- `packs/gfx`
+- `packs/lowmem/gfx`
+
+This project has specified a [GPL 3.0 licence](https://github.com/pokeheadroom/RENDER96-HD-TEXTURE-PACK/blob/master/LICENSE)
+
+## Render96-Alpha-3.1-modelpack
+
+[ModelPack](https://github.com/Render96/ModelPack) Alpha 3.1.7 is used as 3D model pack in:
+
+- `packs/Render96-Alpha-3.1-modelpack`
+- `packs/lowmem/Render96-Alpha-3.1-modelpack`
+
+This project hasn't specified a licence.
