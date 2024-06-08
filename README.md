@@ -1,6 +1,6 @@
 # Render96extractor
 
-Tool to extract and generate ressources package for [Render96/Render96ex](https://github.com/Render96/Render96ex) (sm64ex fork). This tools also pack the demo bin data so that [cdeletre/Render96ex](https://github.com/cdeletre/Render96ex/tree/tester_rt64alpha) can be used (it's a fork that build the executable without hardcoding assets).
+Tool to extract and generate ressources package for [Render96/Render96ex](https://github.com/Render96/Render96ex) (sm64ex fork). This tools also pack the demo bin data so that [cdeletre/Render96ex](https://github.com/cdeletre/Render96ex/tree/tester_rt64alpha) can be used (it's a fork that builds the executable without hardcoding assets).
 
 # Usage
 
@@ -67,7 +67,7 @@ dynos
 
 ## Render96ex
 
-Everything in this repository comes from [Render96ex](https://github.com/Render96/Render96ex) and foll except:
+Everything in this repository comes from [Render96ex](https://github.com/Render96/Render96ex) except:
 
 - `packs/gfx`
 - `packs/lowmem/gfx`
