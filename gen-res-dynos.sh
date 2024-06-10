@@ -38,8 +38,8 @@ function print_help {
   echo '    textures are resized to 25%'
   echo '    audio is resampled to 22050Hz'
   echo ''
-  echo "example: $0 -m hdtextures -m 3dmodels -m audio -l"
-  echo '         This will generate ressources with 3 packs for low memory.'
+  echo "example: $0 -p hdtextures -p 3dmodels -p audio -l"
+  echo '         This will generate ressources with 3 packs for low memory using am64 docker.'
   echo ''
   echo 'res'
   echo '|-- base.zip (required)'
@@ -136,7 +136,7 @@ case ${MODE} in
     then
       echo "Docker image render96extractor:${ARCH} not found. Will build it."
       echo "It may take a while."
-      echo "(EXEC) docker built . -t render96extractor:${ARCH}"
+      echo "(EXEC) docker built . --platform=linux/${ARCH} -t render96extractor:${ARCH}"
       docker build . -t render96extractor:${ARCH}
 
       if [ ! $? -eq 0 ]
